@@ -1,19 +1,35 @@
+<head>
+  <title>Clappr Player</title>
+  <meta charset="UTF-8">
+  <!-- Player -->
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/clappr/0.2.86/clappr.min.js"></script>
+  <!-- Video resolution switcher -->
+  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/clappr/clappr-level-selector-plugin@latest/dist/level-selector.min.js"></script>
+</head>
 
-<script src="https://content.jwplatform.com/libraries/zkpZNdwa.js"></script>
-<div id='playerBLiyUVVsMPRD'></div>
-<script type="text/javascript">
-    var player = jwplayer('playerBLiyUVVsMPRD');
-        jwplayer("playerBLiyUVVsMPRD").setup({
-            file: "http://srv.elitehdbr.vip:8880/live/tfeira442/SY6AFtPOZu/2821.m3u8",
-            image: "",
-            autostart: true,
-            hlshtml: true,
-            width: '640',
-            height: '360',
-            logo: {
-            },
-            skin: {
-                name: "seven"
-            }
-        });
-    </script>
+<body>
+  <div id="player"></div>
+  <script>
+    var player = new Clappr.Player({
+      source: "http://srv.elitehdbr.vip:8880/live/Sidneypage/Lh0uxADRGU/6283.m3u8",
+      parentId: "#player",
+      plugins: {
+        core: [LevelSelector]
+      },
+      levelSelectorConfig: {
+        //Optional : custom labels
+        title: '動画品質',
+        labels: {
+          0: 'Very low',
+          1: 'Low ',
+          2: 'Medium ',
+          3: 'HQ',
+          4: 'High',
+          5: 'Very high',
+          6: 'Extremy high',
+          7: 'Highest'
+        },
+      },
+    });
+  </script>
+</body>
