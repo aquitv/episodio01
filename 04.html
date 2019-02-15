@@ -1,1 +1,20 @@
-<td><iframe src="https://www.youtube.com/embed/aqGvw7GEKgE&t?ecver=1?controls=0&mute=1&showinfo=0&rel=0&autoplay=1&loop=1&playlist=aqGvw7GEKgE&t" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="140px" width="200px" allowfullscreen></iframe></td>
+<head>
+  <link href="https://vjs.zencdn.net/7.0.3/video-js.css" rel="stylesheet">
+
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+  <script src="http://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
+</head>
+
+<body>
+  <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
+  poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+    <source src="http://listaccess.me:8880/movie/rose11/rose11/23.mp4" type='video/mp4'>
+    <source src="http://listaccess.me:8880/movie/rose11/rose11/23.mp4" type='video/webm'>
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+
+  <script src="https://vjs.zencdn.net/7.0.3/video.js"></script>
+</body>
