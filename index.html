@@ -1,25 +1,20 @@
-<link rel="stylesheet" href="//releases.flowplayer.org/7.0.4/commercial/skin/skin.css">
-    <style>
-
-   </style>
-   <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
-  <script src="//releases.flowplayer.org/7.0.4/commercial/flowplayer.min.js"></script>
-  <script src="//releases.flowplayer.org/hlsjs/flowplayer.hlsjs.min.js"></script> 
+ <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/clappr/0.2.86/clappr.min.js"></script>
+  <!-- Stats -->
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/clappr-stats/dist/clappr-stats.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/clappr-nerd-stats/dist/clappr-nerd-stats.min.js"></script>
+</head>
+<body>
+  <div id="player"></div>
   <script>
-  flowplayer(function (api) {
-    api.on("load", function (e, api, video) {
-      $("#vinfo").text(api.engine.engineName + " engine playing " + video.type);
-    }); });
+    var player = new Clappr.Player({
+      source: "http://195.154.94.202:1155/live/khalil2018/khalil2018/6446.m3u8",
+      parentId: "#player",
+      plugins: [ClapprNerdStats, ClapprStats],
+      width: '100%',
+      height: '100%',
+      clapprNerdStats: {
+        shortcut: ['command+shift+s', 'ctrl+shift+s'],
+        iconPosition: 'top-right' // Values: 'top-right', 'top-left', 'bottom-right', 'bottom-left', 'none'
+      }
+    });
   </script>
-
-<div class="flowplayer fixed-controls no-toggle no-time play-button obj"
-      style="    width: 85.5%;
-    height: 80%;
-    margin-left: 7.2%;
-    margin-top: 6%;
-    z-index: 1000;" data-key="$812975748999788" data-live="true" data-share="false" data-ratio="0.5625"  data-logo="">
-      <video autoplay="true" stretch="true">
-
-         <source type="application/x-mpegurl" src="http://51.15.161.236:25461/live/nicsky/fuckface/172.m3u8">
-      </video>   
-   </div>
